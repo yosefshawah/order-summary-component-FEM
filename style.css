@@ -1,0 +1,186 @@
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+
+body {
+  /* 3. Add accessible line-height */
+  line-height: 1.5;
+  /* 4. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 5. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 6. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 7. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* 8. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+/*
+    9. Create a root stacking context
+  */
+#root,
+#__next {
+  isolation: isolate;
+}
+
+body {
+  background-color: pink;
+}
+
+:root {
+  --color-blue-pale: hsl(225, 100%, 94%);
+  --color-blue-bright: hsl(245, 75%, 52%);
+  --color-blue-very-pale: hsl(225, 100%, 98%);
+  --color-blue-desaturated: hsl(224, 23%, 55%);
+  --color-blue-dark: hsl(223, 47%, 23%);
+  --font-size: 16px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-blue-pale);
+}
+
+body {
+  font-family: "Red Hat Display", sans-serif;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  background-image: url("./images/pattern-background-desktop.svg");
+  background-size: cover; /* Ensures the image covers the entire body */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 24px 24px 0 0;
+  max-width: 720px;
+  width: 100%;
+  gap: 2rem;
+}
+.wrapper img {
+  width: 100%;
+}
+
+img[data-img="illustration"] {
+  border-radius: 24px 24px 0 0;
+}
+h1 {
+  color: var(--color-blue-dark);
+}
+
+img[data-img="icon-music"] {
+  width: 3rem;
+  height: 3rem;
+}
+.row {
+  display: flex;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+}
+
+.price {
+  width: 100%;
+  max-width: 60%;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--color-blue-very-pale);
+  padding: 1em;
+  border-radius: 10px;
+}
+.price-tag {
+  padding-left: 1.5rem;
+}
+p {
+  text-align: center;
+  max-width: 70%;
+  color: var(--color-blue-desaturated);
+}
+
+.payment-button {
+  max-width: 60%;
+  width: 100%;
+  border-radius: 10px;
+  color: white;
+  font-weight: 700;
+  padding: 0.75em;
+  background-color: var(--color-blue-bright);
+  box-shadow: 0 4px 8px rgba(var(--color-blue-very-pale)); /* Horizontal offset, Vertical offset, Blur radius, Shadow color */
+}
+span[data-color="Annual-plan"] {
+  color: var(--color-blue-dark);
+  font-weight: 900;
+}
+
+div[data-order="order"] {
+  color: var(--color-blue-desaturated);
+  padding-bottom: 4em;
+  font-weight: 700;
+}
+
+.price-change {
+  all: unset;
+  color: var(--color-blue-bright);
+  font-weight: 700;
+  cursor: pointer; /* Make the button clickable */
+  text-decoration: underline;
+}
+
+span[data-color="price"] {
+  color: var(--color-blue-dark);
+  font-weight: 500;
+}

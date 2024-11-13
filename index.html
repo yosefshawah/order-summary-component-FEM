@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Order summary card</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="wrapper">
+      <img
+        src="./images/illustration-hero.svg"
+        data-img="illustration"
+        alt=""
+      />
+      <h1>Order Summary</h1>
+      <p>
+        You can now listen to millions of songs, audiobooks, and podcasts on any
+        device anywhere you like!
+      </p>
+      <div class="row price">
+        <div class="row">
+          <img src="./images/icon-music.svg" data-img="icon-music" alt="" />
+          <div class="col price-tag">
+            <span data-color="Annual-plan">Annual Plan</span>
+            <span data-color="price">$59.99/year</span>
+          </div>
+        </div>
+        <button class="price-change">change</button>
+      </div>
+      <button class="payment-button">Proceed to Payment</button>
+      <div data-order="order">Cancel Order</div>
+    </main>
+
+    <!-- <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div> -->
+  </body>
+</html>
